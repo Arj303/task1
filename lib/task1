@@ -1,0 +1,139 @@
+Given the sequence: 1, 4, 9, 16, 25, what is the next number
+in the sequence?
+
+ANS: 36
+
+
+The clock shows the time as 3:30. What is the angle
+between the hour hand and the minute hand?
+
+ANS: 75 degree
+
+
+Find the missing term in the series: 2, 6, 12, 20, __, 42.
+
+ANS: 30
+
+
+Given the sequence: 1, 4, 9, 16, 25, what is the next number
+in the sequence?
+○ A)30
+○ B)36
+○ C)49
+○ D)64
+
+ANS:36
+
+
+If the day after tomorrow is a Wednesday, what day was it
+three days before the day before yesterday?
+
+ANS: Wednesday
+
+
+
+
+Write a function that checks if a given string is a
+palindrome. A palindrome is a string that reads the same
+forward and backward (e.g., "madam", "racecar").
+
+bool isPalindrome(String s) {
+String cleaned = s.replaceAll(RegExp(r'[^A-Za-z0-9]'), '').toLowerCase();
+String reversed = cleaned.split('').reversed.join('');
+return cleaned == reversed;
+}
+
+void main() {
+print(isPalindrome("madam"));         // true
+print(isPalindrome("racecar"));       // true
+}
+
+
+
+
+Write a function that takes an input number and print all the
+even and odd numbers separately from zero to that input
+number.
+
+void printEvenAndOddNumbers(int n) {
+List<int> evenNumbers = [];
+List<int> oddNumbers = [];
+
+for (int i = 0; i <= n; i++) {
+if (i % 2 == 0) {
+evenNumbers.add(i);
+} else {
+oddNumbers.add(i);
+}
+}
+
+print('Even Numbers: ${evenNumbers.join(', ')}');
+print('Odd Numbers: ${oddNumbers.join(', ')}');
+}
+
+void main() {
+int inputNumber = 10; // Example input number
+printEvenAndOddNumbers(inputNumber);
+}
+
+
+
+
+Write a code to check that the word contains any vowels
+then return true of false.
+
+bool containsVowel(String word) {
+RegExp vowelRegex = RegExp(r'[aeiouAEIOU]');
+
+return vowelRegex.hasMatch(word);
+}
+
+void main() {
+// Examples
+print(containsVowel("hello"));  // true
+print(containsVowel("sky"));    // false
+}
+
+
+
+
+Write a function that returns factorial of the given number
+
+int factorial(int n) {
+if (n == 0) {
+return 1;
+}
+
+int result = 1;
+for (int i = 1; i <= n; i++) {
+result *= i;
+}
+
+return result;
+}
+
+void main() {
+print(factorial(0));  // 1
+print(factorial(10)); // 3628800
+}
+
+
+
+Write a function that takes an array of integers: [2, 4, 6, 8].
+To find the sum of all the elements in the array?
+
+int sumOfArray(List<int> numbers) {
+int sum = 0;
+
+for (int number in numbers) {
+sum += number;
+}
+
+return sum;
+}
+
+void main() {
+List<int> array = [2, 4, 6, 8];
+
+print(sumOfArray(array));  // Output: 20
+}
